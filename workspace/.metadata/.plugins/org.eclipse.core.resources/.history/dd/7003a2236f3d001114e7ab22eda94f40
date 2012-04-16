@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class Recursion6 {
+
+	public static void main(String[] args) {
+		
+		System.out.println("Choose how many digits of the Fibonacho sequaence you want to print.");
+		Scanner in = new Scanner(System.in);
+		int count=in.nextInt();
+		int x=1;
+		int xp=0;
+		int newnum=Fibo(x,xp, count);
+			
+	}	
+	
+	public static int Fibo(int x, int xp, int count){
+		int newx;
+		int newnum;
+		if(count==0){
+			return 0;
+		}	
+		else{
+			count=count-1;
+			newnum=x+Fibo(x, xp, count);
+			System.out.println(newnum);
+		}
+		return 0;
+		
+	}
+}

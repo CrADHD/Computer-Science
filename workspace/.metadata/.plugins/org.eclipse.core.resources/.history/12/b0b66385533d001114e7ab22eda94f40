@@ -1,0 +1,56 @@
+import java.util.*;
+
+public class Recursion7 {
+
+	public static void main(String[] args) throws Exception {
+		
+		Scanner in = new Scanner(System.in);
+		System.out.println("Enter in value:");
+		int end = in.nextInt();
+		System.out.println("Enter a second number");
+		int start = in.nextInt();
+		print_recursive(start,end);
+		int sum = sumof(end);
+		System.out.println("The sum is: " + sum);
+	}
+	
+	//print recursive from start to end
+	public static void print_recursive(int start, int end)
+	{
+		if(end - start == 0)
+		{
+			//print last value
+			System.out.println(end);
+		}
+		else
+		{	
+			//print current value
+			System.out.println(start);
+			
+			//increase value by 1
+			start++;
+			
+			//print next value
+			print_recursive(start, end);
+		}
+	}
+	
+	//find the sum op
+	public static int sumof(int end)
+	{
+		if(end == 1)
+		{
+			//return last value
+			return 1;
+		}
+		else
+		{	
+			//decrement
+			int oneless = end-1;
+			
+			//return current value + oneless
+			return end + sumof(oneless);
+		}
+	}	
+	
+}

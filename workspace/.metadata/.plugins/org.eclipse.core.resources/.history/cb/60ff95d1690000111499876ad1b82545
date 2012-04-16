@@ -1,0 +1,33 @@
+import java.util.*;
+
+
+
+public class SAT {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner in = new Scanner(System.in);
+		int points = 0;
+		
+		System.out.println("Would you like to play a game? type 1 " +
+				"for yes. Of course no matter what you " +
+				"WILL take this test...");
+		int WC = in.nextInt();
+		
+		System.out.println("Choose the word or set of words that," +
+				" when inserted in the sentence, best " +
+				"fits the meaning of the sentence as a whole." +
+				"Ms. Fergusson’s main criticism of the artist’s " +
+				"rendering of the ancient mammal’s physical " +
+				"appearance is that, unsupported by even a ------- " +
+				"of fossil evidence, the image is bound to be ------- .");
+		
+		
+
+	}
+
+}

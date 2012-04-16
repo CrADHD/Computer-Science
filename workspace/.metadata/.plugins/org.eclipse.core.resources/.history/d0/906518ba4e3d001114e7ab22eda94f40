@@ -1,0 +1,27 @@
+public class Recursion6 {
+
+	public static void main(String[] args) {
+		
+		int z=0;
+		int x=1;
+		while(x<6){
+			
+			int sum=Fibo(x, z);
+			System.out.println(sum);
+			x=x+1;
+			
+		}
+	}	
+	
+	public static int Fibo(int y, int z){
+		
+		if(y==0){
+			return 0;
+		}
+		else{
+			int newnum=y+z;
+			return y+Fibo(newnum, z);
+		}
+		
+	}
+}

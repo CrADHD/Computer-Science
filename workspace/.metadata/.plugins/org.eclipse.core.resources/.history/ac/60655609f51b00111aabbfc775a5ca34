@@ -1,0 +1,437 @@
+import java.util.Scanner;
+
+public class CollegeTrip {
+public static int pass=0;     // for telling if task passed
+	
+	public static void main(String[] args) {
+		Scanner in =new Scanner(System.in);	
+		//
+	    System.out.println("Welcome to the Summer Trip \n After your first year at \n college you have gone on vacation. \n Lets see if you can get a simple cookie!");
+	    System.out.println("Press any number for a free cookie.");
+	    int v=in.nextInt();	
+	    while(CollegeTrip.pass !=5)
+	    {
+			    	System.out.println("Task one");
+			    	waiting(1);
+			    	task1();
+			    	
+			    
+			    if(CollegeTrip.pass ==0)
+			    {
+			    	waiting(1);
+			    	task1();	
+			    }
+			    if(CollegeTrip.pass ==1)
+			    {
+			    	waiting(1);
+			    	task2();
+			    }
+			    if(CollegeTrip.pass ==2)
+			    {	
+			        waiting(1);
+		     	    task3();
+			    	
+			    }
+			    if(CollegeTrip.pass ==3)
+			    {
+			    	waiting(1);
+			    	task4();
+			    }
+			    if(CollegeTrip.pass ==4)
+			    {
+			    	waiting(1);
+			    	task5();
+			    }	
+			    if(CollegeTrip.pass ==5)
+			    {	
+			}
+	    }    
+	}
+	public static void waiting (int n){
+        
+        long t0, t1;
+
+        t0 =  System.currentTimeMillis();
+
+        do{
+            t1 = System.currentTimeMillis();
+        }
+        while ((t1 - t0) < (n * 1000));
+      while (t1 - t0 < n);
+    }
+	
+	
+	
+	
+	public static void task1()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		  System.out.println("Where will you go? Decide now. NOW!");
+		  waiting(1);
+		  //+35%
+		  System.out.println("1-To the beach?");
+		 waiting(1);
+		  //-10%
+		  System.out.println("2-To the shark filled ocean?");                  // 1st Q's
+		  waiting(1);
+		  //-15%
+		  System.out.println("3-To a fallout bunker?");
+		  waiting(1);
+		  System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+35;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-10;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-15;
+		  }
+		  waiting(1);
+		  System.out.println("You arive at your destination. What do you do?");
+		  waiting(1);
+		  //-29%
+		  System.out.println("1-Go swiming despite the people running in terror away from it");
+		  waiting(1);
+		  //+10
+		  System.out.println("2-Use common sense and go to your hotel");                  // 2nd Q's
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-29;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+10;
+		  }
+		  int x = (int) (Math.random() * 101);     // rand num
+		  if(x > percent){
+			  System.out.println("Despite the answer being obvious");
+			  waiting(1);
+			  System.out.println("you decide to go against the norm and");
+			  waiting(1);
+			  System.out.println("be a complete pillock and chose the wrong answer");
+			  waiting(1);
+			  System.out.println("I you want a cookie you'll have to try harder than that...");
+			  }
+		  if(x<percent)
+		  {
+			  System.out.println("You sit in your hotel room and");
+			  waiting(1);
+			  System.out.println("watch as monsters rampage the city.");
+			  waiting(1);
+			  System.out.println("Cookie latter. Task two first.");
+			  CollegeTrip.pass=1;
+		  }
+	}
+	public static void task2()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		
+		System.out.println("You have to do a BIG project for English");
+		 waiting(1);
+		 //-10%
+		 System.out.println("1-Every night you watch TV while doing the project");                  // 1st Q's
+		 waiting(1);
+		 //+40
+		 System.out.println("2-Plan out the project and do a little bit every day");
+		 waiting(1);
+		 //-45%
+		 System.out.println("3-Do nothing on the project");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-10;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+40;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-45;
+		  }
+		  System.out.println("When you get to class when the project is due/n the teacher says you have 5 mins to turn it in");
+		  waiting(1); 
+		  System.out.println("You can,");
+		  waiting(1);
+		  //+5%
+		  System.out.println("1-try and fix any errors you find");                  // 2nd Q's
+		  waiting(1);
+		  //-1%
+		  System.out.println("2-sit back and relax you feel good about your project");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+5;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-1;
+		  }
+		  int x = (int) (Math.random() * 101);     // rand num
+		   
+		  if(x > percent)
+		  {
+			  System.out.println("Despite the answer being obvious");
+			  waiting(1);
+			  System.out.println("you decide to go against the norm and");
+			  waiting(1);
+			  System.out.println("be a complete pillock and chose the wrong answer");
+			  waiting(1);
+			  System.out.println("I you want a cookie you'll have to try harder than that...");
+		  }
+		  if(x<percent)
+		  {
+			  System.out.println("You have passed Task two");
+			  waiting(1);
+			  System.out.println("Well done!!!!!!!!!!!");
+			  waiting(1);
+			  System.out.println("Cookie latter. Task three first.");
+			  CollegeTrip.pass=2;
+		  }
+		  
+		 
+	}
+	public static void task3()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		System.out.println("what Will you do when Math Hw is assigned for the week");
+		waiting(1);
+		//-10%
+		 System.out.println("1-Every night you watch TV while doing the homework");                  // 1st Q's
+		 waiting(1);
+		 //+40
+		 System.out.println("2-Do the homework for the assinged day and spend about an hour on every night ");
+		 waiting(1);
+		 //-45%
+		 System.out.println("3-Dont do the homework");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-10;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+40;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-45;
+		  }
+		  System.out.println("When you get to class The teacher says you may discuss the homework with your peers");
+		  waiting(1); 
+		  System.out.println("You can,");
+		  waiting(1);
+		  //+9%
+		  System.out.println("1-Talk to your peers and correct your work");                  // 2nd Q's
+		  waiting(1);
+		  //-1%
+		  System.out.println("2-sit back and relax");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+9;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-1;
+		  }
+		  int x = (int) (Math.random() * 101);     // rand num
+		   
+		  if(x > percent)
+		  {
+			  System.out.println("Despite the answer being obvious");
+			  waiting(1);
+			  System.out.println("you decide to go against the norm and");
+			  waiting(1);
+			  System.out.println("be a complete pillock and chose the wrong answer");
+			  waiting(1);
+			  System.out.println("I you want a cookie you'll have to try harder than that...");
+		  }
+		  if(x<percent)
+		  {
+			  System.out.println("You have passed Task three");
+			  waiting(1);
+			  System.out.println("Well done!!!!!!!!!!!");
+			  waiting(1);
+			  System.out.println("Cookie latter. Task four first.");
+			  CollegeTrip.pass=3;
+		  }
+		  
+	}
+	public static void task4()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		System.out.println("what Will you do when a history essay is assigned and due in a week");
+		waiting(1);
+		//+40
+		 System.out.println("1-Space it out over the week");                  // 1st Q's
+		 waiting(1);
+		 //-10
+		 System.out.println("2- Do it all in one day");
+		 //-45%
+		 System.out.println("3 Don't do it");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+40;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-10;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-45;
+		  }
+		  System.out.println("There is a rubric with it ");
+		  waiting(1); 
+		  System.out.println("You can,");
+		  waiting(1);
+		  //+9%
+		  System.out.println("1-turn it in with the rubric");                  // 2nd Q's
+		  waiting(1);
+		  //-1%
+		  System.out.println("2-sit back and relax don't turn in the rubric");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+9;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-1;
+		  }
+		  int x = (int) (Math.random() * 101);     // rand num
+		   
+		  if(x > percent)
+		  {
+			  System.out.println("Despite the answer being obvious");
+			  waiting(1);
+			  System.out.println("you decide to go against the norm and");
+			  waiting(1);
+			  System.out.println("be a complete pillock and chose the wrong answer");
+			  waiting(1);
+			  System.out.println("I you want a cookie you'll have to try harder than that...");
+		  }
+		  if(x<percent)
+		  {
+			  System.out.println("You have passed Task four");
+			  waiting(1);
+			  System.out.println("Well done!!!!!!!!!!!");
+			  waiting(1);
+			  System.out.println("Cookie latter. Task five first.");
+			  CollegeTrip.pass=4;
+		  }
+		
+	}
+	public static void task5()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		
+		
+		System.out.println("There is the Final for Math tomorrow");
+		waiting(1);
+		//-40%
+		 System.out.println("1-Party non stop");
+		 waiting(1);
+		 //+40
+		 System.out.println("2-Study a bunch ");                  // 1st Q's
+		 waiting(1);
+		 //-30%
+		 System.out.println("3-Play MW3");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  
+		  if(input == 1)
+		  {
+			  percent=percent-40;
+			  
+		  }
+		  
+		  if(input == 2)
+		  {
+			  percent=percent+40;
+		  }
+		  
+		  if(input == 3)
+		  {
+			  percent=percent-30;
+		  }
+		  
+		  
+		  System.out.println("At Lunch before the final you");
+		  waiting(1); 
+		  System.out.println("You can,");
+		  waiting(1);
+		  //+9%
+		  System.out.println("1-Last Minute Studying");                  // 2nd Q's
+		  waiting(1);
+		  //-9%
+		  System.out.println("2-sit back and relax");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  
+		  if(input == 1)
+		  {
+			  percent=percent+9;
+		  }
+		  
+		  if(input == 2)
+		  {
+			  percent=percent-9;
+		  }
+		  
+		  int x = (int) (Math.random() * 101);     // rand num
+	
+		  if(x > percent){
+			  waiting(1);
+			  System.out.println("HOW DID YOU MAKE IT THIS FAR?");
+		  }
+		  
+		  if(x<percent)
+		  {
+			  System.out.println("You have passed Task five");
+			  waiting(1);
+			  System.out.println("HERE'S A BROWSER COOKIE!");
+			  waiting(1);
+			  CollegeTrip.pass=5;
+		  }
+	}
+
+}

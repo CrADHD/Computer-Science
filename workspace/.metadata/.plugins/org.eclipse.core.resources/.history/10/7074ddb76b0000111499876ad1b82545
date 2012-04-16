@@ -1,0 +1,219 @@
+import java.util.*;
+public class Formulas {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	while(1==1){
+		Scanner in = new Scanner(System.in);
+		System.out.println("All physics equations assume no air resistance!");
+		System.out.println("Which function would you like to use?");
+		System.out.println("1. Find the square of a number.");
+		System.out.println("2. Find the cube of a number");
+		System.out.println("3. Multiply two numbers");
+		System.out.println("4. Divide two numbers");
+		System.out.println("5. Find the distance an object travels using it's innitial and finnal velocity and time");
+		System.out.println("6. Find the final velocity of an object using it's innitial velocity and time");
+		System.out.println("7. Find the innitial velocity of an object using it's final velocity and time");
+		System.out.println("8. Find the acceleration of an object using innitial and final velocity and time");
+		System.out.println("9. Find the weight of an object using it's mass");
+		System.out.println("10. Find the horizontal acceleration of any object");
+		System.out.println("11. Raise a number to the 999999999 power");
+		int which = in.nextInt();
+		
+		if(which==1){
+			// Square
+			System.out.println("Enter a number");
+			double input_1 = in.nextDouble();
+			double output = Square(input_1);
+			System.out.println("The double is " + output);
+			// comp
+		}
+		if(which==2){
+			// Cube
+			System.out.println("Enter a number");
+			double input_5 = in.nextDouble();
+			double output = Cube(input_5);
+			System.out.println("The cube is " + output);
+			// comp
+		}
+		if(which==3){
+			// X*Y
+			System.out.println("Enter a number");
+			double input_2a = in.nextDouble();
+			System.out.println("Enter another number");
+			double input_2b = in.nextDouble();
+			double output = Multiply(input_2a, input_2b);
+			System.out.println("The product is " + output);
+			
+		}
+		if(which==4){
+			// X/Y
+			System.out.println("Enter a number");
+			double input_3a = in.nextDouble();
+			System.out.println("Enter the number to divide by");
+			double input_3b = in.nextDouble();
+			double output = Divide(input_3a, input_3b);
+			System.out.println("The quotient is " + output);
+			
+		}
+		if(which==5){
+			// Distance formula
+			System.out.println("Enter Vi");
+			double input_5a = in.nextDouble();
+			System.out.println("Enter time");
+			double input_5b = in.nextDouble();
+			double output = Distance(input_5a, input_5b);
+			System.out.println("The answer is " + output);
+			
+		}
+		if(which==6){
+			// Vf
+			System.out.println("Enter Vi");
+			double input_6a = in.nextDouble();
+			System.out.println("Enter time");
+			double input_6b = in.nextDouble();
+			double output = VelocityF(input_6a, input_6b);
+			System.out.println("The answer is " + output);
+			
+		}
+		if(which==7){
+			// Vi
+			System.out.println("Enter Vf");
+			double input_7a = in.nextDouble();
+			System.out.println("Enter time");
+			double input_7b = in.nextDouble();
+			double output = VelocityI(input_7a, input_7b);
+			System.out.println("The answer is " + output);
+			
+		}
+		if(which==8){
+			// Acceleration
+			System.out.println("Enter Vf");
+			double input_8a = in.nextDouble();
+			System.out.println("Enter Vi");
+			double input_8b = in.nextDouble();
+			System.out.println("Enter time");
+			double input_8c = in.nextDouble();
+			double output = Acceleration(input_8a, input_8b, input_8c);
+			System.out.println("The answer is " + output);
+			
+		}
+		if(which==9){
+			// Weight
+			System.out.println("Enter Mass");
+			double input_9 = in.nextDouble();
+			double output = Weight(input_9);
+			System.out.println("The answer is " + output);
+			
+		}
+		if(which==10){
+			// Horizontal accel
+			System.out.println("Enter a number");
+			double input_10 = in.nextDouble();
+			double output = hAcc(input_10);
+			System.out.println("The answer is always " + output);
+			System.out.println("Without air resistance an object will never have horizontal acceleration");
+			
+		}
+		if(which==11){
+			// infinity
+			System.out.println("Enter a number");
+			double input_11 = in.nextDouble();
+			double output = wat(input_11);
+			System.out.println(output);
+			System.out.println("WAT?");
+			
+		}
+		if(which>11){
+			
+			System.out.println("Congratulations, you are now officially a tool.");
+		}
+		System.out.println("I Liek Chocolate Milk");
+	} // End Main
+	}
+	public static double Square(double input_x){
+		
+		double output_x = input_x * input_x;
+		return output_x;
+		
+	}
+	
+	public static double Multiply(double input_x, double input_y){
+		
+		double output_x = input_x * input_y;
+		return output_x;
+
+	}
+	
+	public static double Divide(double input_x, double input_y){
+		
+		double output_x = input_x / input_y;
+		return output_x;
+
+	}
+	
+	public static double Cube(double input_x){
+		
+		double output_x = java.lang.Math.pow (input_x, 3);
+		return output_x;
+
+	}
+	
+	public static double Distance(double input_x, double input_y){
+		
+		double sub_a = input_x*input_y; 
+		double sub_b = input_y*9.81/2;
+		double output_x = sub_a+sub_b;
+		return output_x;
+
+	}
+	
+	public static double VelocityF(double Vi, double Time){
+		
+		double output_x = Vi - 9.81*Time;
+		return output_x;
+
+	}
+
+	public static double VelocityI(double Vf, double Time){
+		
+		double sub_a = -9.81*Time;
+		double output_x = Vf-sub_a;
+		return output_x;
+
+	}
+	
+	public static double Acceleration(double Vf, double Vi, double Time){
+		
+		double sub_a = Vf-Vi;
+		double output_x = sub_a/Time;
+		return output_x;
+
+	}
+	
+	public static double Weight(double Mass){
+		
+		double output_x = Mass*9.81;
+		return output_x;
+
+	}
+	
+	public static double hAcc(double input_x){
+		
+		double output_x = 0;
+		return output_x;
+
+	}
+	
+	public static double wat(double input_11){
+		
+		double output_meep = java.lang.Math.pow (input_11, 999999999);
+		return output_meep;
+		
+	}
+  
+}  
+

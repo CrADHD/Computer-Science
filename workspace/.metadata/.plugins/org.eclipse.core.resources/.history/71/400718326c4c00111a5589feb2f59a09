@@ -1,0 +1,65 @@
+import java.util.*;
+
+class bankAccount{
+	Scanner in = new Scanner(System.in);
+	
+	public double balance;
+	public String name;
+	
+	public static String bankName = "abc Bank";
+	
+	public bankAccount(){
+		balance = 0;
+		name = "Anonymous";
+	}
+	
+	public bankAccount(Double newBalance, String newName){
+		balance = newBalance;
+		name = newName;
+	}
+	
+	public void printInfo(){
+		System.out.println(bankName);
+		System.out.println(name);
+		System.out.println(balance);
+	}
+	
+	public void printInfo(String words){
+		System.out.println(words);
+		this.printInfo();
+	}
+	
+	public void bankAdd(Double newBalance){
+		System.out.println("Enter amount to add");
+		int amount = in.nextInt();
+		balance += amount;
+	}
+	public void bankSub(Double newBalance){
+		System.out.println("Enter amount to add");
+		int amount = in.nextInt();
+		balance += amount;
+	}
+	
+}
+
+public class BankAccount{
+
+	public static void main(String[] args) throws Exception{
+		
+		bankAccount[] allcustomers = new bankAccount[2];
+		allcustomers[0] = new bankAccount(10.00, "Cameron Smith");
+		allcustomers[1] = new bankAccount(20.00, "Mike Young");
+		allcustomers[3] = new bankAccount(30.00, "Kyle Gonsalves");
+		
+		for(bankAccount custObj : allcustomers){
+			custObj.printInfo();
+		}
+		
+		System.out.println("");
+		allcustomers[0].bankName = "123 Bank";
+		
+		for(int i=0; i < allcustomers.length; i++ ){
+			allcustomers[i].printInfo("Name Changed");
+		}
+	}
+}

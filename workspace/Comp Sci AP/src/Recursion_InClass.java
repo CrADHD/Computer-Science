@@ -1,0 +1,36 @@
+import java.util.*;
+
+class Recursion_InClass
+{
+   public static void main(String arg[])
+   {
+
+	Scanner in =new Scanner(System.in);	
+	int WAT = in.nextInt();
+   	//find the factorial of 3
+   	int result = factorial(WAT);
+   	
+   	//print the result
+   	System.out.println(result);
+   }
+
+   public static int factorial(int count)
+   {	
+   	//if it is 1 return 1
+   	if(count == 1)
+   	{
+   		return 1;
+   	}
+   	else
+    {
+          //subtract one
+          int temp = count-1;
+          	
+          //multiply with one less
+          count = count + factorial(temp);
+          	
+          //return result
+          return count;
+     }
+   }
+}

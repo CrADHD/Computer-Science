@@ -1,0 +1,32 @@
+public class Recursion5 {
+
+	public static void main(String[] args) {
+		
+		int x=1;
+		while(true){
+			if(x<6){
+			int sum=factorial(x);
+			System.out.println(sum);
+			x=x+1;
+			}
+			else{
+				break;
+			}
+		}
+		
+		
+	}	
+	
+	public static int factorial(int y){
+		
+		int sum=0;
+		if(y==1){
+			return 1;
+		}
+		else{
+			y=y-1;
+			return sum*factorial(y);
+		}
+		
+	}
+}

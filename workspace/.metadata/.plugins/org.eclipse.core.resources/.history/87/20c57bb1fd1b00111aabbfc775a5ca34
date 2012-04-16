@@ -1,0 +1,372 @@
+import java.util.Scanner;
+
+public class CollegeTrip {
+public static int pass=0;     // for telling if task passed
+	
+	public static void main(String[] args) {
+		Scanner in =new Scanner(System.in);	
+		//
+	    System.out.println("Welcome to the Summer Trip \n After your first year at \n college you have gone on vacation. \n Lets see if you can get a simple cookie!");
+	    System.out.println("Press any number for a free cookie.");
+	    int v=in.nextInt();	
+	    while(CollegeTrip.pass !=5)
+	    {
+			    	System.out.println("Task one");
+			    	waiting(1);
+			    	task1();
+			    	
+			    
+			    if(CollegeTrip.pass ==0)
+			    {
+			    	waiting(1);
+			    	task1();	
+			    }
+			    if(CollegeTrip.pass ==1)
+			    {
+			    	waiting(1);
+			    	task2();
+			    }
+			    if(CollegeTrip.pass ==2)
+			    {	
+			        waiting(1);
+		     	    task3();
+			    }
+			    if(CollegeTrip.pass ==3)
+			    {
+			    	waiting(1);
+			    	task4();
+			    }
+			    if(CollegeTrip.pass ==4)
+			    {
+			    	waiting(1);
+			    	task5();
+			    }	
+	    }    
+	}
+	public static void waiting (double n){
+        
+        long t0, t1;
+
+        t0 =  System.currentTimeMillis();
+
+        do{
+            t1 = System.currentTimeMillis();
+        }
+        while ((t1 - t0) < (n * 1000));
+      while (t1 - t0 < n);
+    }
+	
+	
+	
+	
+	public static void task1()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		  System.out.println("Vacation time! Where will you go?");
+		  waiting(1);
+		  //+35%
+		  System.out.println("1-To the beach?");
+		 waiting(1);
+		  //-10%
+		  System.out.println("2-To the shark filled ocean?");                  // 1st Q's
+		  waiting(1);
+		  //-20%
+		  System.out.println("3-To a fallout bunker with a radioactive pool?");
+		  waiting(1);
+		  System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+35;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-10;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-20;
+		  }
+		  waiting(1);
+		  System.out.println("How will you get there?");
+		  waiting(1);
+		  //-29%
+		  System.out.println("1-Get a ride from a pedophile... eeeeew.");
+		  waiting(1);
+		  //+10
+		  System.out.println("2-A plane with a perfect safety record");                  // 2nd Q's
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-29;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+10;
+		  }
+		  int x = (int) (Math.random() * 101);     // rand num
+		  
+		  willpass(x, percent, 1);
+		  
+	}
+	public static void task2()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		
+		System.out.println("\n \nYou have arrived! What to do?");
+		 waiting(1);
+		 //-10%
+		 System.out.println("1-Go to your hotel");                  // 1st Q's
+		 waiting(1);
+		 //+40
+		 System.out.println("2-Go to some random guys house and sleep there");
+		 waiting(1);
+		 //-45%
+		 System.out.println("3-Go have a small drink at a bar where nothing ever happens ");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+40;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-45;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent+0;
+		  }
+		  System.out.println("Now what will you do?");
+		  waiting(1);
+		  //-30%
+		  System.out.println("1-Go swiming despite the people running in terror away from the beach");
+		  waiting(1);
+		  //+40
+		  System.out.println("2-Use common sense and go to your room");                  // 2nd Q's
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-30;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+40;
+		  }
+		  int x = (int) (Math.random() * 101);     // rand num
+		   
+		  willpass(x, percent, 2);
+		  
+		 
+	}
+	public static void task3()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		System.out.println("You're in your hotel room. What do you do?");
+		waiting(1);
+		//-10%
+		 System.out.println("1-Call room service and pig out.");                  // 1st Q's
+		 waiting(1);
+		 //+40
+		 System.out.println("2-learn about the local area ");
+		 waiting(1);
+		 System.out.println("3-Sleep");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-10;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+40;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent+0;
+		  }
+		  System.out.println("The next day you can");
+		  waiting(1);
+		  //+9%
+		  System.out.println("1-work out");                  // 2nd Q's
+		  waiting(1);
+		  //-1%
+		  System.out.println("2-sit back and relax");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+9;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-1;
+		  }
+		  int x = (int) (Math.random() * 101);     // rand num
+		   
+		  willpass(x, percent, 3);
+		  
+	}
+	public static void task4()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		System.out.println("after staying for 3 days you're at a bar \nwhen you see a girl. What so you do?");
+		waiting(1);
+		//+40
+		 System.out.println("1-Stay to yourself");                  // 1st Q's
+		 waiting(1);
+		 //-10
+		 System.out.println("2-Say a fleeting 'hello'");
+		 //-45%
+		 System.out.println("3-Buy the evil witch a drink");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+40;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-10;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-45;
+		  }
+		  System.out.println("The bartender asks what you want");
+		  waiting(1);
+		  //+19%
+		  System.out.println("1-some water");                  // 2nd Q's
+		  waiting(1);
+		  //-19%
+		  System.out.println("2-Flaming shot of tequila");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+19;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-19;
+		  }
+		  int x = (int) (Math.random() * 101);     // rand num
+		   
+		  willpass(x, percent, 4);
+		
+	}
+	public static void task5()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		
+		
+		System.out.println("Tomorrow you go home. Your flight is scheduled \nto leave at 4am. How will you prepare?");
+		waiting(1);
+		//-40%
+		 System.out.println("1-Party non stop");
+		 waiting(1);
+		 //+40
+		 System.out.println("2-Pack and go to sleep");                  // 1st Q's
+		 waiting(1);
+		 //-30%
+		 System.out.println("3-Play MW3");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  
+		  if(input == 1)
+		  {
+			  percent=percent-40;
+			  
+		  }
+		  
+		  if(input == 2)
+		  {
+			  percent=percent+40;
+		  }
+		  
+		  if(input == 3)
+		  {
+			  percent=percent-30;
+		  }
+		  
+		  
+		  System.out.println("You wake up at 3 am. What do you do before you go?");
+		  waiting(1); 
+		  System.out.println("You can,");
+		  waiting(1);
+		  //+9%
+		  System.out.println("1-Review the boarding procedures and evacuation/emergency procedures");                  // 2nd Q's
+		  waiting(1);
+		  //-9%
+		  System.out.println("2-sit back and relax");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  
+		  if(input == 1)
+		  {
+			  percent=percent+9;
+		  }
+		  
+		  if(input == 2)
+		  {
+			  percent=percent-9;
+		  }
+		  
+		  int x = (int) (Math.random() * 101);     // rand num
+	
+		 willpass(x, percent, 5);
+	}
+	
+	public static void willpass(int chance, int percent, int passnum){
+		
+		if(chance > percent){
+			  System.out.println("Despite the answer being obvious");
+			  waiting(1);
+			  System.out.println("you decide to go against the norm and");
+			  waiting(1);
+			  System.out.println("be a complete pillock and chose the wrong answer");
+			  waiting(1.5);
+			  System.out.println("Unless of course you made all the right choices");
+			  waiting(1);
+			  System.out.println("in which case the odds were just against you :<");
+			  waiting(1);
+			  System.out.println("I you want a cookie you'll have to try harder than that...");
+			  }
+		  if(chance < percent)
+		  {
+			  System.out.println("You sit in your hotel room and");
+			  waiting(1);
+			  System.out.println("watch as monsters rampage the city.");
+			  waiting(1);
+			  System.out.println("Cookie latter. Task two first.");
+			  CollegeTrip.pass=passnum;
+		  }
+		  
+	}
+
+}

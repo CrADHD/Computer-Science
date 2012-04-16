@@ -1,0 +1,24 @@
+
+
+public class SAT {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int points = 0;
+		
+		System.out.println("Choose the word or set of words that," +
+				" when inserted in the sentence, best " +
+				"fits the meaning of the sentence as a whole." +
+				"Ms. Fergusson’s main criticism of the artist’s " +
+				"rendering of the ancient mammal’s physical " +
+				"appearance is that, unsupported by even a ------- " +
+				"of fossil evidence, the image is bound to be ------- .")
+
+
+	}
+
+}

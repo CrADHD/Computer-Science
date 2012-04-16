@@ -1,0 +1,180 @@
+interface account2
+{
+	//variables are final and static
+	public String bankName = "Bank of Lost Socks";
+	
+	//methods are empty
+	public double getBalance();
+	public double withdraw(double money);
+	public double deposit(double money);	
+}
+
+class SavingAccount2 implements account2{
+	public double Balance;
+	public double Fee;
+	public double AccountNum;
+	public String Username;
+	
+	/**
+	 * Constructor
+	 * @param newBalance
+	 */
+	public SavingAccount2(double newBalance, double NewNum, double NewFee, String NewName)
+	{
+		Username = NewName;
+		AccountNum = NewNum;
+		Fee = NewFee;
+		Balance = newBalance;
+	}
+	public double getBalance()
+	{
+		return Balance;
+	}
+	
+	public double getNum()
+	{
+		return AccountNum;
+	}
+	
+	public double getFee()
+	{
+		return Fee;
+	}
+	
+	public String getUserName()
+	{
+		return Username;
+	}
+
+	public double withdraw(double money) {
+		Balance = Balance - money;
+		return Balance;
+	}
+
+	public double deposit(double money) {
+		Balance = Balance + money;
+		return Balance;
+	}
+}
+class CheckingAccount2 implements account2{
+	public double Balance;
+	public double Interest;
+	public double Fee;
+	public double AccountNum;
+	public String Username;
+	
+	/**
+	 * Constructor
+	 * @param newBalance
+	 * @return 
+	 * @return 
+	 */
+	public void SavingAccount(double newBalance, double NewNum, double NewFee, double NewInterest, String NewName)
+	{
+		Username = NewName;
+		AccountNum = NewNum;
+		Fee = NewFee;
+		Interest = NewInterest;
+		Balance = newBalance;
+	}
+	
+	/**
+	 * get balance
+	 * @return the current balance
+	 */
+	public double getBalance()
+	{
+		return Balance;
+	}
+	
+	public double getNum()
+	{
+		return AccountNum;
+	}
+	
+	public double getFee()
+	{
+		return Fee;
+	}
+	
+	public double getInterest()
+	{
+		return Interest;
+	}
+	
+	public String getUserName()
+	{
+		return Username;
+	}
+
+	public double withdraw(double money) {
+		Balance = Balance - money;
+		return Balance;
+	}
+
+	public double deposit(double money) {
+		Balance = Balance + money;
+		return Balance;
+	}
+}
+class CashDeposit2 implements account2{
+	public double Balance;
+	public double Interest;
+	public double AccountNum;
+	public double Date;      //3.14 = March 2014
+	public String Username;
+	
+	/**
+	 * Constructor
+	 * @param newBalance
+	 * @return 
+	 */
+	public void SavingAccount2(double newBalance, double NewNum, double NewInterest, double ExpDate, String NewName)
+	{
+		Username = NewName;
+		AccountNum = NewNum;
+		Interest = NewInterest;
+		Balance = newBalance;
+		Date = ExpDate;
+	}
+	
+	/**
+	 * get balance
+	 * @return the current balance
+	 */
+	public double getBalance()
+	{
+		return Balance;
+	}
+	
+	public double getNum()
+	{
+		return AccountNum;
+	}
+	
+	public double getInterest()
+	{
+		return Interest;
+	}
+	
+
+	public double getExpDate()
+	{
+		return Date;
+	}
+	
+	public String getUserName()
+	{
+		return Username;
+	}
+
+	public double withdraw(double money) {
+		Balance = Balance - money;
+		return Balance;
+	}
+
+	public double deposit(double money) {
+		Balance = Balance + money;
+		return Balance;
+	}
+}

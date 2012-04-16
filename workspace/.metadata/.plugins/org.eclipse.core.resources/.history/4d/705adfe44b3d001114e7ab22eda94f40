@@ -1,0 +1,30 @@
+public class Recursion5 {
+
+	public static void main(String[] args) {
+		
+		int x = 1;
+		do{
+			
+			int sum=factorial(x);
+			x=x+1;
+			System.out.println(sum);
+			
+		}while(x<6);
+		
+		
+	}	
+	
+	public static int factorial(int x){
+
+		x=x-1;z
+		int sum=0;
+		if(x==0){
+			return sum;
+		}
+		else{
+			sum=sum+factorial(x);
+			return sum;
+		}
+		
+	}
+}

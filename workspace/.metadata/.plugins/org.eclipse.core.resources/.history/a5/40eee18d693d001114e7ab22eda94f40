@@ -1,0 +1,30 @@
+public class Recursion6 {
+
+	public static void main(String[] args) {
+		
+		int z=1;
+		int x=1;
+		int count=1;
+		while(count<6){
+			
+			int newnum=Fibo(x,z);
+			x=x+newnum;
+			System.out.println(x);
+			count=count+1;
+			
+		}
+	}	
+	
+	public static int Fibo(int y, int count){
+		
+		if(count==0){
+			return 0;
+		}
+		else{
+			int oneless=y-1;
+			count=count-1;
+			return y+Fibo(oneless, count);
+		}
+		
+	}
+}

@@ -1,0 +1,331 @@
+import java.util.*;
+
+
+
+public class SAT {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+		Scanner in = new Scanner(System.in);
+		double points = 0;			// int for score tally
+		
+		System.out.println("Would you like to play a game? type 1 " +
+				"for yes. Of course no matter what you " +
+				"WILL take this test..." +
+				"" +
+				"If you answer a Q correctly you get 1 point" +
+				"If you answer incorrectly you get -0.25 point" +
+				"If you skip you get 0 points");
+		int WC = in.nextInt();		// WC = Who Cares / Does not matter
+		
+			double ans1 = Q1(WC);   // println requests
+			double truth1 = in.nextDouble();	   // user answer
+			
+			
+			double ans2 = Q1(WC);   // println requests
+			double truth2 = in.nextDouble();	   // user answer
+			
+			
+			double ans3 = Q1(WC);   // println requests
+			double truth3 = in.nextDouble();	   // user answer
+			
+			
+			double ans4 = Q1(WC);   // println requests
+			double truth4 = in.nextDouble();	   // user answer
+			
+			
+			double ans5 = Q1(WC);   // println requests
+			double truth5 = in.nextDouble();	   // user answer
+			
+			
+			double ans6 = Q1(WC);   // println requests
+			double truth6 = in.nextDouble();	   // user answer
+			
+			
+			double ans7 = Q1(WC);   // println requests
+			double truth7 = in.nextDouble();	   // user answer
+			
+			
+			double ans8 = Q1(WC);   // println requests
+			double truth8 = in.nextDouble();	   // user answer
+			
+			
+			double ans9 = Q1(WC);   // println requests
+			double truth9 = in.nextDouble();	   // user answer
+				
+			
+			double ans10 = Q1(WC);   // println requests
+			double truth10 = in.nextDouble();	   // user answer
+			
+			
+			double ans11 = Q1(WC);   // println requests
+			double truth11 = in.nextDouble();	   // user answer
+			
+			
+			double ans12 = Q1(WC);   // println requests
+			double truth12 = in.nextDouble();	   // user answer
+			
+			
+			double ans13 = Q1(WC);   // println requests
+			double truth13 = in.nextDouble();	   // user answer
+			
+			
+			double ans14 = Q1(WC);   // println requests
+			double truth14 = in.nextDouble();	   // user answer
+			
+			
+			double ans15 = Q1(WC);   // println requests
+			double truth15 = in.nextDouble();	   // user answer
+			points = AnsCheck(ans15, truth15, points);
+			
+	}	
+	
+	
+	public static double AnsCheck(double ans, double input, double points){
+		
+		if(ans==input){
+			points = points + 1;
+		}
+	
+		if(ans!=input){
+			points = points - 0.25;
+		}
+		
+		return points;
+		
+	}
+		
+	public static int Q1(int WC){
+		
+		System.out.println("Q1: Choose the word or set of words that," +		// Question 1
+				"when inserted in the sentence, best " +
+				"fits the meaning of the sentence as a whole." +
+				"Ms. Fergusson’s main criticism of the artist’s " +
+				"rendering of the ancient mammal’s physical " +
+				"appearance is that, unsupported by even a ------- " +
+				"of fossil evidence, the image is bound to be ------- .");
+		System.out.println("1. modicum . . speculative");
+		System.out.println("2. particle . . supplemented");
+		System.out.println("3. perusal . . substantiated");
+		System.out.println("4. fabrication . . obsolete");
+		System.out.println("5. recapitulation . . exhausted");
+		
+		int ans = 1;
+		return ans;
+		
+	}
+
+	public static int Q2(int WC){				// Question 2
+		
+		System.out.println("Q2: A woman drove to work at an average speed " +
+				"of  miles per hour and returned along the " +
+				"same route at  miles per hour. If her total " +
+				"traveling time was  hour, what was the total " +
+				"number of miles in the round trip?");
+		System.out.println("1. 30");
+		System.out.println("2. 30 1/7");
+		System.out.println("3. 34 2/7");
+		System.out.println("4. 35");
+		System.out.println("5. 40");
+		
+		int ans = 3;
+		return ans;
+		
+	}
+	
+	public static int Q3(int WC){				// Question 3
+		
+		System.out.println("Q3: When, in 1864, a factory established by " +
+				"Alfred Nobel to manufacture nitroglycerin " +
+				"blew up, the scientist discovered that the " +
+				"explosive was as ------- as it was powerful," +
+				"------- to detonate without warning.");
+		System.out.println("1. dormant . . ready");
+		System.out.println("2. fickle . . unlikely");
+		System.out.println("3. volatile . . liable");
+		System.out.println("4. unprecedented . . intended");
+		System.out.println("5. inactive . . designed");
+		
+		int ans = 3;
+		return ans;
+		
+	}
+	
+	
+	public static int Q4(int WC){				// Question 4
+		
+		System.out.println("Q4: Refuting the claim that the surest way " +
+				"to reduce anger is to express it, the " +
+				"author asserts that ------- anger can " +
+				"actually increase its ------- .");
+		System.out.println("1. denying . . impact");
+		System.out.println("2. understanding . . importance");
+		System.out.println("3. overcoming . . likelihood");
+		System.out.println("4. venting . . intensity");
+		System.out.println("5. voicing . . benefits");
+
+		int ans = 4;
+		return ans;
+		
+	}
+	
+	public static int Q5(int WC){				// Question 5
+		
+		System.out.println("Q5: In the xy-plane, the graph of the equation " +
+				"above assumes its maximum value at . " +
+				"What is the value of b?" +
+				"y=-2x^2+bx+5");
+		System.out.println("1. –8");
+		System.out.println("2. -4");
+		System.out.println("3. 4");
+		System.out.println("4. 8");
+		System.out.println("5. 10");
+
+		int ans = 4;
+		return ans;
+		
+	}
+	
+	public static int Q6(int WC){				// Question 6
+		
+		System.out.println("Q6: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+	
+	public static int Q7(int WC){				// Question 7
+		
+		System.out.println("Q7: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+	
+	public static int Q8(int WC){				// Question 8
+		
+		System.out.println("Q8: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+	
+	public static int Q9(int WC){				// Question 9
+		
+		System.out.println("Q9: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+	
+	public static int Q10(int WC){				// Question 10
+		
+		System.out.println("Q10: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+	
+	public static int Q11(int WC){				// Question 11
+		
+		System.out.println("Q11: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+	
+	public static int Q12(int WC){				// Question 12
+		
+		System.out.println("Q12: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+	
+	public static int Q13(int WC){				// Question 13
+		
+		System.out.println("Q13: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+	
+	public static int Q14(int WC){				// Question 14
+		
+		System.out.println("Q14: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+	
+	public static int Q15(int WC){				// Question 15
+		
+		System.out.println("Q4: ");
+		System.out.println("1. ");
+		System.out.println("2. ");
+		System.out.println("3. ");
+		System.out.println("4. ");
+		System.out.println("5. ");
+
+		int ans = 1;
+		return ans;
+		
+	}
+}

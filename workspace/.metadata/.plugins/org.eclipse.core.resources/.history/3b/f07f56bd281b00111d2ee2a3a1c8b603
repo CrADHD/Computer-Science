@@ -1,0 +1,491 @@
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+/**
+ * @author Cameron
+ *
+ */
+public class CollegeTrip {
+public static int pass=0;
+public static int yu=0; 
+	
+	public static void main(String[] args) {
+		//scanner for input 
+		Scanner in =new Scanner(System.in);
+		
+		//add variable
+		int select;
+		
+		// Date
+		Date dNow = new Date( );
+	    SimpleDateFormat ft = 
+	    new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+	    
+	    //print the date
+	    System.out.println("Current Date: " + ft.format(dNow));
+	    
+	    //print copyright
+	    System.out.println("Copyright(c) Cameron Smith Cooperation All rights Reserved Camdaminum.c Coop 2011");
+	    
+	    //loading
+	    waiting(1);
+	    System.out.println("by AlfieTM");
+	    waiting(4);
+	    System.out.println("Loading College Adventure Version 1.2");
+	    waiting(1);
+	    System.out.println("Loading");
+	    waiting(1);
+	    System.out.println("Loading");
+	    waiting(1);
+	    System.out.println("Brought to you by AlfieTM with Camdaminum.c Coop");
+	    waiting(1);
+	    System.out.println("Made for Windows 7-elipse");
+	    waiting(1);
+	    System.out.println("Microsoft Windows [Verison 6.1.7601] ");
+	    waiting(1);
+	    System.out.println("Welcome to the College Adventure V 1.2 \n You are a freshman at UCLA \n Lets see if you survive!!!");
+	    int x = 0;
+	    int v;
+	    System.out.println("press 1");
+	    v=in.nextInt();	
+	    while(program72.pass !=5)
+	    {
+			    	System.out.println("Task one");
+			    	waiting(1);
+			    	task1();
+			    	
+			    
+			    if(program72.pass !=1)
+			    {
+			    	waiting(1);
+			    	task2();
+			    	
+			    }
+			    if(program72.pass !=0)
+			    {
+			    	task1();
+			    }
+			    if(program72.pass !=2)
+			    {	
+			    waiting(1);
+			    task3();
+			    	
+			    }
+			    if(program72.pass !=3)
+			    {
+			    	waiting(1);
+			    	task4();
+			    }
+			    if(program72.pass !=4)
+			    {
+			    	waiting(1);
+			    	task5();
+			    }	
+			    if(program72.pass !=5)
+			    {	
+			    
+			    	 System.out.println("Well done you have survived your freshman year of college");
+			    	 System.out.println("Good job!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+			    	 waiting(1);
+			    	 System.out.println("You now get a free pie");
+			    }
+	    }    
+	}
+	public static void waiting (int n){
+        
+        long t0, t1;
+
+        t0 =  System.currentTimeMillis();
+
+        do{
+            t1 = System.currentTimeMillis();
+        }
+        while ((t1 - t0) < (n * 1000));
+      while (t1 - t0 < n);
+    }
+	public static void task1()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		  System.out.println("You are in a bio class /n the teacher says there will be a quiz tomorrow /n and every thing she says will be on the quiz /n what will you do?");
+		  waiting(1);
+		  //+35%
+		  System.out.println("1-You listen and take notes on the lecture");
+		 waiting(1);
+		  //-10%
+		  System.out.println("2-you chat with your friends in class ");
+		  waiting(1);
+		  //-15%
+		  System.out.println("3-Text with friends");
+		  waiting(1);
+		  System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+35;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-10;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-15;
+		  }
+		  waiting(1);
+		  System.out.println("The next day when you walk in to class you find a paper on the desk it, is the quiz");
+		  waiting(1);
+		  System.out.println("what do you do?");
+		  waiting(1);
+		  //-29%
+		  System.out.println("1-randomly guess");
+		  waiting(1);
+		  //+10
+		  System.out.println("2-Use your brain and put answers down accordingly ");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-29;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+10;
+		  }
+		  int x = (int) (Math.random() * 101);
+		  System.out.println(x);
+		  if(x > percent)
+		  {
+			  System.out.println("You have failed ");
+			  waiting(1);
+			  System.out.println("you can't take life any more");
+			  waiting(1);
+			  System.out.println("You then drop out and then commit suicide!!!!!!");
+			  waiting(1);
+			  System.out.println("you now must now try life again");
+			  waiting(1);
+			  System.out.println("remember kids there are no retakes for life");
+			  program72.yu++;
+		  }
+		  if(x<percent)
+		  {
+			  System.out.println("You have passed Task one");
+			  waiting(1);
+			  System.out.println("Well done!!!!!!!!!!!");
+			  waiting(1);
+			  System.out.println("Now for task two");
+			  program72.pass=2;
+		  }
+	}
+	public static void task2()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		
+		System.out.println("You have to do a BIG project for English");
+		 waiting(1);
+		 //-10%
+		 System.out.println("1-Every night you watch TV while doing the project");
+		 waiting(1);
+		 //+40
+		 System.out.println("2-Plan out the project and do a little bit every day");
+		 waiting(1);
+		 //-45%
+		 System.out.println("3-Do nothing on the project");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-10;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+40;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-45;
+		  }
+		  System.out.println("When you get to class when the project is due/n the teacher says you have 5 mins to turn it in");
+		  waiting(1); 
+		  System.out.println("You can,");
+		  waiting(1);
+		  //+5%
+		  System.out.println("1-try and fix any errors you find");
+		  waiting(1);
+		  //-1%
+		  System.out.println("2-sit back and relax you feel good about your project");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+5;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-1;
+		  }
+		  int x = (int) (Math.random() * 101);
+		  System.out.println(x);
+		  if(x > percent)
+		  {
+			  System.out.println("You have failed ");
+			  waiting(1);
+			  System.out.println("you can't take life any more");
+			  waiting(1);
+			  System.out.println("You then drop out and then commit suicide!!!!!!");
+			  waiting(1);
+			  System.out.println("you now must now try life again");
+			  waiting(1);
+			  System.out.println("remember kids there are no retakes for life");
+			  program72.yu++;
+		  }
+		  if(x<percent)
+		  {
+			  System.out.println("You have passed Task two");
+			  waiting(1);
+			  System.out.println("Well done!!!!!!!!!!!");
+			  waiting(1);
+			  System.out.println("Now for task three");
+			  program72.pass=2;
+		  }
+		  
+		 
+	}
+	public static void task3()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		System.out.println("what Will you do when Math Hw is assigned for the week");
+		waiting(1);
+		//-10%
+		 System.out.println("1-Every night you watch TV while doing the homework");
+		 waiting(1);
+		 //+40
+		 System.out.println("2-Do the homework for the assinged day and spend about an hour on every night ");
+		 waiting(1);
+		 //-45%
+		 System.out.println("3-Dont do the homework");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-10;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+40;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-45;
+		  }
+		  System.out.println("When you get to class The teacher says you may discuss the homework with your peers");
+		  waiting(1); 
+		  System.out.println("You can,");
+		  waiting(1);
+		  //+9%
+		  System.out.println("1-Talk to your peers and correct your work");
+		  waiting(1);
+		  //-1%
+		  System.out.println("2-sit back and relax");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+9;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-1;
+		  }
+		  int x = (int) (Math.random() * 101);
+		  System.out.println(x);
+		  if(x > percent)
+		  {
+			  System.out.println("You have failed ");
+			  waiting(1);
+			  System.out.println("you can't take life any more");
+			  waiting(1);
+			  System.out.println("You then drop out and then commit suicide!!!!!!");
+			  waiting(1);
+			  System.out.println("you now must now try life again");
+			  waiting(1);
+			  System.out.println("remember kids there are no retakes for life");
+			  program72.yu++;
+		  }
+		  if(x<percent)
+		  {
+			  System.out.println("You have passed Task three");
+			  waiting(1);
+			  System.out.println("Well done!!!!!!!!!!!");
+			  waiting(1);
+			  System.out.println("Now for task four");
+			  program72.pass=3;
+		  }
+		  
+	}
+	public static void task4()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		System.out.println("what Will you do when a history essay is assigned and due in a week");
+		waiting(1);
+		//+40
+		 System.out.println("1-Space it out over the week");
+		 waiting(1);
+		 //-10
+		 System.out.println("2- Do it all in one day");
+		 //-45%
+		 System.out.println("3 Don't do it");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+40;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-10;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-45;
+		  }
+		  System.out.println("There is a rubric with it ");
+		  waiting(1); 
+		  System.out.println("You can,");
+		  waiting(1);
+		  //+9%
+		  System.out.println("1-turn it in with the rubric");
+		  waiting(1);
+		  //-1%
+		  System.out.println("2-sit back and relax don't turn in the rubric");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+9;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-1;
+		  }
+		  int x = (int) (Math.random() * 101);
+		  System.out.println(x);
+		  if(x > percent)
+		  {
+			  System.out.println("You have failed ");
+			  waiting(1);
+			  System.out.println("you can't take life any more");
+			  waiting(1);
+			  System.out.println("You then drop out and then commit suicide!!!!!!");
+			  waiting(1);
+			  System.out.println("you now must now try life again");
+			  waiting(1);
+			  System.out.println("remember kids there are no retakes for life");
+			  program72.yu++;
+		  }
+		  if(x<percent)
+		  {
+			  System.out.println("You have passed Task four");
+			  waiting(1);
+			  System.out.println("Well done!!!!!!!!!!!");
+			  waiting(1);
+			  System.out.println("Now for task five");
+			  program72.pass=4;
+		  }
+		
+	}
+	public static void task5()
+	{
+		Scanner in =new Scanner(System.in);
+		int percent =50;
+		int input;
+		System.out.println("There is the Final for Math tomorrow");
+		waiting(1);
+		//-40%
+		 System.out.println("1-Party non stop");
+		 waiting(1);
+		 //+40
+		 System.out.println("2-Study a bunch ");
+		 waiting(1);
+		 //-30%
+		 System.out.println("3-Play MW3");
+		 waiting(1);
+		 System.out.println("choose 1, 2 ,or 3");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent-40;
+			  
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent+40;
+		  }
+		  if(input == 3)
+		  {
+			  percent=percent-30;
+		  }
+		  System.out.println("At Lunch before the final you");
+		  waiting(1); 
+		  System.out.println("You can,");
+		  waiting(1);
+		  //+9%
+		  System.out.println("1-Last Minute Studying");
+		  waiting(1);
+		  //-9%
+		  System.out.println("2-sit back and relax");
+		  waiting(1);
+		  System.out.println("choose 1 or 2");
+		  input=in.nextInt();
+		  if(input == 1)
+		  {
+			  percent=percent+9;
+		  }
+		  if(input == 2)
+		  {
+			  percent=percent-9;
+		  }
+		  int x = (int) (Math.random() * 101);
+		  System.out.println(x);
+		  if(x > percent)
+		  {
+			  System.out.println("You have failed ");
+			  waiting(1);
+			  System.out.println("you can't take life any more");
+			  waiting(1);
+			  System.out.println("You then drop out and then commit suicide!!!!!!");
+			  waiting(1);
+			  System.out.println("you now must now try life again");
+			  waiting(1);
+			  System.out.println("remember kids there are no retakes for life");
+			  program72.yu++;
+		  }
+		  if(x<percent)
+		  {
+			  System.out.println("You have passed Task five");
+			  waiting(1);
+			  System.out.println("Well done!!!!!!!!!!!");
+			  waiting(1);
+			  program72.pass=5;
+		  }
+	}
+
+}
